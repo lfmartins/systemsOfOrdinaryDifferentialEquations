@@ -1,4 +1,7 @@
+% !TEX root = ../systemsOfOrdinaryDifferentialEquations.tex
 \documentclass{ximera}
+
+\input{../preamble.tex}
 
 \title{What is a System}
 
@@ -9,5 +12,59 @@ This activity describes what is a system of ordinary differential equations.
 \end{abstract}
 
 \maketitle
+
+\begin{sectionOutcomes}
+After completing this section, students should be able to do the following:
+
+\begin{itemize}
+\item Recognize a system of ODEs.
+\item Interpret a system of ODEs as a vector field.
+\item Understand the representation of a vector field in the phase plane.
+\end{itemize}
+
+\end{sectionOutcomes}
+
+To introduce the concept of a system of ODEs, let's consider the \emph{Lotka-Volterra predator-prey model}, which describes two animal species in the wild, traditionally referred to as ``rabbits'' (the prey) and ``foxes'' (the predator). Denoting by $R(t)$ and $F(t)$ the rabbit and fox populations, respectively, we use the following differential equations to model the dynamics of the two species in the wild:
+\begin{align}
+\label{rabbit-eq}R'&=aR-bRF\\
+\label{fox-eq}F'&=cF+dRF
+\end{align}
+How do ecologists come up with this model? This is not a simple question, since there usually are many possible ways of modeling a real-world system. As a rule of thumb, scientists try to use the simplest possible model as a first approximation. For the predator prey model, the following are reasonable hypothesis:
+
+\begin{itemize}
+\item In the absence of predators, the prey population grows without limits. We can model this by an exponential growth model:
+\[
+R'=aR\text{ where $a>0$}.
+\]
+\item In the absence of prey, the predator population decays to zero, since they don't have any available food. This can be modeled by an exponential decay model:
+\[
+F'=-cF\text{ where $b>0$.}
+\]
+\item To model the interactions between the two populations, we assume that the number of possible ``predation situations'' is proportional to the number of possible ``encounters'' between individuals of the two populations, which can be approximated by the product $RF$.
+\item Since predation is disadvantageous to the prey population, we subtract a term proportional to $RF$ to the prey equation:
+\[
+R'=aR-bRF\text{ where $a,c>0$}.
+\]
+\item Since predation is beneficial to the predator population, we add a term proportional to $RF$ to the predator population:
+\[
+F'=-cF+dRF\text{ where $b,d>0$.}
+\]
+\end{itemize}
+Putting all together, we get the pair of equations~\ref{rabbit-eq},~\ref{fox-eq}.
+
+\begin{problem}
+
+Let's consider now consider two populations $x$ and $y$ that are in competition with each other. Let's get a system of ODEs for $x$, $y$ based on some simple assumptions.
+
+Suppose that, in isolation, each of the populations grows exponentially. Write below expressions for the derivatives, using the variables $a>0$ and $c>0$, respectively, for the growth rates for $x$ and $y$, respectively:
+
+\begin{question}
+$x'= \answer{ax}$
+\end{question}
+\begin{question}
+$y'= \answer{bx}$
+\end{question}
+\end{problem}
+
 
 \end{document}
