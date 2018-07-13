@@ -136,6 +136,8 @@
 \newcommand {\sliceColor }[0]{greenyellow}
 \newcommand {\vector }[1]{\left \langle ##1\right \rangle }
 \newcommand {\sectionOutcomes }[0]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
 \newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
 \newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
 \newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
