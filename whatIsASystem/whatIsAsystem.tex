@@ -1,7 +1,9 @@
 % !TEX root = ../systemsOfOrdinaryDifferentialEquations.tex
 \documentclass{ximera}
 
+
 \input{../preamble.tex}
+
 
 \title{What is a System}
 
@@ -144,7 +146,7 @@ R=4,\quad F=3
 With this information, we can compute the rates at which each of the populations are growing, by plugging in the values of $R$ and $F$ into the equations~\ref{rabbit-eq-c} and~\ref{fox-eq-c}:
 \begin{align*}
 R'&=1.2\cdot 4 - 0.5\cdot 4\cdot 3=-1.2\\
-F'&=-\cdot 4 + 1.5\cdot 4\cdot 3=15.0
+F'&=-4 + 1.5\cdot 4\cdot 3=15.0
 \end{align*}
 In particular, we can conclude that, for these particular sizes of the rabbit and fox population, the number of rabbits is decreasing and the number of foxes is increasing.
 
@@ -154,11 +156,52 @@ In particular, we can conclude that, for these particular sizes of the rabbit an
 
 \begin{question}
 $R'= \answer{3.5}$
+
+The rabbit population is 
+\begin{multipleChoice}
+\choice[correct]{Increasing}
+\choice{Decreasing}
+\end{multipleChoice}
 \end{question}
 \begin{question}
 $F'= \answer{6.5}$
+
+The fox population is 
+\begin{multipleChoice}
+\choice[correct]{Increasing}
+\choice{Decreasing}
+\end{multipleChoice}
 \end{question}
 \end{problem}
+
+We can also represent the rates of change geometrically. We interpret the pair of derivatives $(R',F')$ as the components of a vector:
+\[
+\begin{bmatrix}R'\\F'\end{bmatrix}=
+\begin{bmatrix}1.2R-0.5RF\\-F+1.5RF\end{bmatrix}
+\]
+Then, for $R=4$ and $F=3$ we have:
+\[
+\begin{bmatrix}R'\\F'\end{bmatrix}=
+\begin{bmatrix}-1.2\\15.0\end{bmatrix}
+\]
+This can be represented graphically as in the figure below:
+\begin{center}
+\begin{tikzpicture}
+	\begin{axis} [
+		xlabel={$R$},
+		ylabel={$F$},
+		xmin=0, xmax=5,
+		ymin=0, ymax=20,
+		xtick={0, 1, 2, 3, 4, 5},
+		ytick={0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20},
+		xmajorgrids=true,
+		ymajorgrids=true,
+		grid style=dashed,
+	]
+	\end{axis}
+	\draw (0,0) -- (1,1);
+\end{tikzpicture}
+\end{center}
 
 \end{document}
 

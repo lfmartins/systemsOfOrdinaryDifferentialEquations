@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.7.11)  14 JUL 2018 07:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.7.11)  14 JUL 2018 11:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1284,14 +1284,14 @@ File: uesint.fd
 
 LaTeX Warning: No \author given.
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 20.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 22.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 20.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 22.
 
-Overfull \hbox (12.09557pt too wide) in paragraph at lines 27--28
+Overfull \hbox (12.09557pt too wide) in paragraph at lines 29--30
 \OT1/cmr/m/it/12 Lotka-Volterra predator-prey model\OT1/cmr/m/n/12 , which de-s
 cribes two an-i-mal species
  []
@@ -1302,19 +1302,19 @@ cribes two an-i-mal species
 ]
 \c@depthICount=\count300
 LaTeX Font Info:    Font shape `OMS/cmr/m/sl' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 64.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 66.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/sl' undefined
-(Font)              using `OT1/cmss/bx/n' instead on input line 69.
+(Font)              using `OT1/cmss/bx/n' instead on input line 71.
 
 \c@depthIICount=\count301
 [4]
-Overfull \hbox (8.85307pt too wide) in paragraph at lines 91--93
+Overfull \hbox (8.85307pt too wide) in paragraph at lines 93--95
 []\OT1/cmr/m/sl/12 A more re-al-is-tic as-sump-tion in the predator-prey model
  []
 
-[5] [6]) [7]
+[5] [6] [7]) [8]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 16.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 16.
  (./systemsOfOrdinaryDifferentialEquations.aux)
@@ -1330,14 +1330,16 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 16.
  ) 
 Here is how much of TeX's memory you used:
- 36409 strings out of 492646
- 867727 string characters out of 6129563
- 1103888 words of memory out of 5000000
- 39495 multiletter control sequences out of 15000+600000
- 14502 words of font info for 60 fonts, out of 8000000 for 9000
+ 36712 strings out of 492646
+ 877204 string characters out of 6129563
+ 1106979 words of memory out of 5000000
+ 39791 multiletter control sequences out of 15000+600000
+ 15214 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,10n,100p,767b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 75i,10n,100p,767b,2001s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxsl10.pf
+b></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 ></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
 usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
@@ -1345,12 +1347,13 @@ r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr
 /local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></us
 r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
 /local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/l
-ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on systemsOfOrdinaryDifferentialEquations.pdf (7 pages, 123190 b
+ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/lo
+cal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on systemsOfOrdinaryDifferentialEquations.pdf (8 pages, 149190 b
 ytes).
 PDF statistics:
- 99 PDF objects out of 1000 (max. 8388607)
- 80 compressed objects within 1 object stream
- 15 named destinations out of 1000 (max. 500000)
+ 120 PDF objects out of 1000 (max. 8388607)
+ 97 compressed objects within 1 object stream
+ 20 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
