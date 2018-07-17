@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=latex 2018.7.11)  13 JUL 2018 17:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=latex 2018.7.11)  17 JUL 2018 04:06
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -791,7 +791,12 @@ Package pdftexcmds Info: \pdfdraftmode is ignored in DVI mode.
 Package epstopdf Warning: Drivers other than `pdftex' and `luatex' are not supp
 orted.
 
-)) (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/hyperref.sty
+))
+(/usr/local/texlive/2018/texmf-dist/tex/latex/pgf/frontendlayer/libraries/tikzl
+ibraryexternal.code.tex
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzexternalshared.code.tex))
+(/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
 
 (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
@@ -893,11 +898,6 @@ Package: tex4ht
 --------------------------------------
 \tmp:toks=\toks54
 ))
-(/usr/local/texlive/2018/texmf-dist/tex/latex/pgf/frontendlayer/libraries/tikzl
-ibraryexternal.code.tex
-(/usr/local/texlive/2018/texmf-dist/tex/generic/tex4ht/usepackage.4ht)
-(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzexternalshared.code.tex))
 \c@theorem=\count160
 \c@algorithm=\count161
 \c@axiom=\count162
@@ -929,6 +929,12 @@ s/tikzexternalshared.code.tex))
 \c@hintLevel=\count188
 \c@titlenumber=\count189
 \c@sectiontitlenumber=\count190
+)
+(/usr/local/texlive/2018/texmf-dist/tex/generic/tex4ht/usepackage.4ht
+l.21 --- TeX4ht warning --- \usepackage{tex4ht} again? ---
+l.30 --- TeX4ht warning --- if \RequirePackage[tex4ht]{hyperref} or \usepackage
+[tex4ht]{hyperref} was used try instead, repectively, \RequirePackage{hyperref}
+ or \usepackage{hyperref} ---
 ) (../preamble.tex
 (/usr/local/texlive/2018/texmf-dist/tex/latex/esint/esint.sty
 Package: esint 
@@ -1838,7 +1844,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 )
-Overfull \hbox (10200.73082pt too wide) in paragraph at lines 158--9
+Overfull \hbox (10200.73082pt too wide) in paragraph at lines 158--11
 [][][][][][][][] []\OT1/cmr/m/n/10 What is a Sys-tem[][][][][][][][][][][][][][
 ][][][][][][][][] 
  []
@@ -1847,38 +1853,38 @@ Overfull \hbox (10200.73082pt too wide) in paragraph at lines 158--9
 
 ] [2]
 
-./whatIsAsystem.tex:10: LaTeX Error: Environment abstract undefined.
+./whatIsAsystem.tex:12: LaTeX Error: Environment abstract undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.10 \begin{abstract}
+l.12 \begin{abstract}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./whatIsAsystem.tex:12: LaTeX Error: \begin{document} ended by \end{abstract}.
+./whatIsAsystem.tex:14: LaTeX Error: \begin{document} ended by \end{abstract}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.12 \end{abstract}
+l.14 \end{abstract}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 20.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 22.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 20.
-LaTeX Font Info:    Try loading font information for U+msa on input line 27.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 22.
+LaTeX Font Info:    Try loading font information for U+msa on input line 29.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1886,7 +1892,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 27.
+LaTeX Font Info:    Try loading font information for U+msb on input line 29.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1894,27 +1900,43 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+esint on input line 27.
+LaTeX Font Info:    Try loading font information for U+esint on input line 29.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/esint/uesint.fd
 File: uesint.fd 
-) [3] [4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 70.
- [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 70.
+) [3] [4] [5]
+l.203 --- TeX4ht warning --- File `"./whatIsAsystem-figure0.xbb"' not found ---
 
-(./whatIsAsystem.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 70.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 70.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 70.
+l.203 --- TeX4ht warning --- Cannot determine size of graphic in "./whatIsAsyst
+em-figure0.xbb" (no BoundingBox) ---
+./whatIsAsystem.tex:203: Undefined control sequence.
+\:Needs #1->File: \Gin 
+                       @base.svg
+l.203 \end{tikzpicture}
+                       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+l. 203 --- needs --- ./whatIsAsystem-figure0.svg ---
+[6]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 206.
+ [7]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 206.
+ (./whatIsAsystem.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 206.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 206.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 206.
  ) 
 Here is how much of TeX's memory you used:
- 42037 strings out of 492647
- 953957 string characters out of 6129589
- 1348156 words of memory out of 5000000
- 44897 multiletter control sequences out of 15000+600000
+ 42068 strings out of 492647
+ 954425 string characters out of 6129589
+ 1348188 words of memory out of 5000000
+ 44924 multiletter control sequences out of 15000+600000
  6080 words of font info for 28 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,5n,98p,2561b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 69i,6n,98p,2561b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on whatIsAsystem.dvi (5 pages, 26516 bytes).
+Output written on whatIsAsystem.dvi (7 pages, 36504 bytes).
