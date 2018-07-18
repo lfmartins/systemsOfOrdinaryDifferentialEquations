@@ -1,30 +1,18 @@
-<!DOCTYPE html><html lang="en"><head> <title>Systems of Ordinary Differential
-                                                                  
-
-                                                                  
-Equations</title> 
+<!DOCTYPE html><html lang="en"><head> <title>What is a System</title> 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
 <meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
 <meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
 <!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
-<meta name="src" content="systemsOfOrdinaryDifferentialEquations.tex"/> 
-<meta name="og:image" content=""/> 
-<meta name="description" content="xourse"/> 
+<meta name="src" content="whatIsASystem.tex"/> 
 <meta name="author" content=""/> 
 <meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
 <meta name="ximera" content="version 0.0.1"/> 
 <link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
 <script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
-<meta name="dependency" content="6e145e32d3dd146e46615b74d8650830e570a1b2 preamble.tex"/><meta name="dependency" content="baf98f571f098ff72c812b292e90dad421cf5c63 sampleActivity.tex"/><meta name="dependency" content="ccffcba979ff295e29d9df808f65b667bbe8359f systemsOfOrdinaryDifferentialEquations.tex"/></head><body> 
+<meta name="dependency" content="6e145e32d3dd146e46615b74d8650830e570a1b2 preamble.tex"/><meta name="dependency" content="eefc0606e0beedc88c58ff4436fd1028060ebf00 whatIsASystem.tex"/></head><body> 
 <div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
 \newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
 \newcommand {\ungraded }[0]{}
-\newcommand {\skip@preamble }[0]{\let \document \relax \let \enddocument \relax \newenvironment {document}{\let \input \otherinput }{}\renewcommand {\documentclass }[2][subfiles]{}}
-\newcommand {\maketitle }[0]{ \pagestyle {empty} \begin {center} ~\\ \vskip .25\textheight \hrulefill \\ \vskip 1em \bfseries {\Huge \@title } \\ \hrulefill \\ \vskip 3em {\Large \@author } \vskip 2em {\large \@date } \end {center} \clearpage \ifnotoc \else \tableofcontents \clearpage \clearpage \fi \pagestyle {main} \let \maketitle \othermaketitle }
-\newcommand {\l@section }[0]{\@dottedtocline {1}{1.5em}{4.2em}}
-\newcommand {\l@subsection }[0]{\@dottedtocline {2}{3.8em}{4.2em}}
-\newcommand {\logo }[1]{\ifx \@onlypreamble \@notprerr \ClassError {xourse}{logo can only be used in the preamble} {Move your logo command to the preamble} \else \IfFileExists {##1}{\gdef \xourse@logo {##1}}{\ClassError {xourse}{logo file does not exist} {To use logo,make sure that the referenced image file exists}}\fi }
-\newcommand {\graded }[1]{}
 \newcommand {\todo }[0]{}
 \newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
 \newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
@@ -172,12 +160,146 @@ Equations</title>
 
                                                                   
 <div class="abstract">
-<!--l. 9--><p class="noindent">This is a course on systems of ordinary differential equations. It is meant
-to be an experiment of setting up a course in Ximera.
+<!--l. 13--><p class="noindent">This activity describes what is a system of ordinary differential equations.
 </p></div>
 <div class="maketitle"></div>
-<a class="activity card " href="sampleActivity" data-options="">sampleActivity<h2>Sample Activity</h2><h3>This is a sample activity.
-</h3></a> <a class="activity card " href="whatIsASystem" data-options="">whatIsASystem</a>
+<!--l. 19--><p class="noindent">After completing this section, students should be able to do the following:
+</p>
+     <ul class="itemize1">
+     <li class="itemize">Recognize a system of ODEs.
+     </li>
+     <li class="itemize">Interpret a system of ODEs as a vector field.
+     </li>
+     <li class="itemize">Understand the representation of a vector field in the phase plane.</li></ul>
+<!--l. 29--><p class="noindent">To introduce the concept of a system of ODEs, let’s consider the <em>Lotka-Volterra
+predator-prey model</em>, which describes two animal species in the wild, traditionally
+referred to as “rabbits” (the prey) and “foxes” (the predator). Denoting
+by <script type="math/tex">R(t)</script> and <script type="math/tex">F(t)</script> the rabbit and fox populations, respectively, we use the following
+differential equations to model the dynamics of the two species in the wild:
+</p><script type="math/tex; mode=display"> \begin{align} 
+\label{rabbit-eq}R'&=aR-bRF\\
+\label{fox-eq}F'&=cF+dRF
+\end{align}</script>
+<!--l. 34--><p class="noindent">How do ecologists come up with this model? This is not a simple question, since
+there usually are many possible ways of modeling a real-world system. As a
+rule of thumb, scientists try to use the simplest possible model as a first
+approximation. For the predator prey model, the following are reasonable
+hypothesis:
+</p><!--l. 38--><p class="noindent">In the absence of predators, the prey population grows without limits. We can model
+this by an exponential growth model: <script type="math/tex; mode=display"> R'=aR\text { where $a>0$}. </script> In the absence of prey, the predator
+population decays to zero, since they don’t have any available food. This can be
+modeled by an exponential decay model: <script type="math/tex; mode=display"> F'=-cF\text { where $b>0$.} </script> To model the interactions between the two
+populations, we assume that the number of possible “predation situations” is
+proportional to the number of possible “encounters” between individuals of the two
+populations, which can be approximated by the product <script type="math/tex">RF</script>. Since predation is
+disadvantageous to the prey population, we subtract a term proportional to <script type="math/tex">RF</script> to the
+prey equation: <script type="math/tex; mode=display"> R'=aR-bRF\text { where $a,c>0$}. </script> Since predation is beneficial to the predator population, we add a
+term proportional to <script type="math/tex">RF</script> to the predator population: <script type="math/tex; mode=display"> F'=-cF+dRF\text { where $b,d>0$.} </script> Putting all together, we get the
+pair of equations <a class="reference" href="#rabbit-eq">rabbit-eq</a>, <a class="reference" href="#fox-eq">fox-eq</a>.
+</p>
+                                                                  
+
+                                                                  
+<div role="article" class="problem-environment problem" id="problem1"><a id="x1-147r1"></a>
+<!--l. 64--><p class="noindent">Let’s consider now consider two populations <script type="math/tex">x</script> and <script type="math/tex">y</script> that are in competition with each
+other. We make the following assumptions: </p>
+     <ul class="itemize1">
+     <li class="itemize">In isolation, each of the populations grows exponentially. We denote the
+     growth rates for <script type="math/tex">x</script> and <script type="math/tex">y</script> by <script type="math/tex">a>0</script> and <script type="math/tex">b>0</script>, respectively.
+     </li>
+     <li class="itemize">The effect of competition to each population is proportional to the product
+     of the populations sizes, <script type="math/tex">xy</script>. We denote the corresponding proportionality
+     constants for populations <script type="math/tex">x</script> and <script type="math/tex">y</script> by <script type="math/tex">c>0</script> and <script type="math/tex">d>0</script>, respectively.</li></ul>
+<div role="article" class="problem-environment question" id="problem2"><a id="x1-148r2"></a> <script type="math/tex">x'= \answer {ax-cxy}</script>
+</div> <div role="article" class="problem-environment question" id="problem3"><a id="x1-149r3"></a>
+<!--l. 75--><p class="noindent"><script type="math/tex">y'= \answer {bx-dxy}</script>
+</p></div>
+</div>
+<div class="theorem-like problem-environment explanation" id="problem4"><a id="x1-150r4"></a>In the absence of competition, the dynamics for each population is given by an
+exponential growth model: <script type="math/tex; mode=display"> \begin{align*} 
+x'&=ax\\
+y'&=cy.
+\end{align*}</script>
+<!--l. 85--><p class="noindent">Competition has a negative effect on the growth of each population, so we need to
+subtract a term proportional to <script type="math/tex">xy</script> to each equation, obtaining: </p><script type="math/tex; mode=display"> \begin{align*} 
+x'&=ax-bxy\\
+y'&=cy-dxy.
+\end{align*}</script>
+<!--l. 90--></div>
+
+<div role="article" class="problem-environment problem" id="problem5"><a id="x1-151r5"></a> A more realistic assumption in the predator-prey model is that the prey population
+grows logistically in the absence of predators. Write the system of ODEs for this
+situation, using <script type="math/tex">a</script> for the intrinsic growth rate and <script type="math/tex">K</script> for the carrying capacity of the
+rabbit population: <div role="article" class="problem-environment question" id="problem6"><a id="x1-152r6"></a>
+<!--l. 96--><p class="noindent"><script type="math/tex">R'= \answer {ax(1-x/K)-bxy}</script>
+</p></div> <div role="article" class="problem-environment question" id="problem7"><a id="x1-153r7"></a>
+<!--l. 100--><p class="noindent"><script type="math/tex">F'= \answer {-cx+dxy}</script>
+</p></div>
+</div>
+<div role="article" class="problem-environment problem" id="problem8"><a id="x1-154r8"></a> Another way in which system appear is in modeling higher-order differential
+equations. Recall the general equation for the unforced harmonic oscillator: <script type="math/tex; mode=display"> mx''+cx'+kx=0, </script> where <script type="math/tex">m>0</script>, <script type="math/tex">c\ge 0</script>
+                                                                  
+
+                                                                  
+and <script type="math/tex">k>0</script>. The variable <script type="math/tex">x</script> represents the displacement of the mass. Let <script type="math/tex">y</script> represent
+the velocity of the mass. Write below a system of ODEs for the variables <script type="math/tex">x</script>,
+<script type="math/tex">y</script>:
+<div role="article" class="problem-environment question" id="problem9"><a id="x1-155r9"></a> <script type="math/tex">x'= \answer {y}</script>
+</div>
+<div role="article" class="problem-environment question" id="problem10"><a id="x1-156r10"></a> <script type="math/tex">y'= \answer {-(k/m)x-(c/m)y}</script>
+</div>
+<div class="theorem-like problem-environment explanation" id="problem11"><a id="x1-157r11"></a>The interpretation of derivative of displacement as velocity gives directly: <script type="math/tex; mode=display"> x'=y. </script> Plugging
+this into the equation of the harmonic oscillator yields: <script type="math/tex; mode=display"> y'=x''=-\frac {k}{m}x-\frac {c}{m}x'=-\frac {k}{m}x-\frac {c}{m}y. </script>
+</div>
+</div>
+<!--l. 129--><p class="noindent">We now proceed to the numerical and graphical interpretation of a system of ODEs.
+Let’s go back to the predator-prey model, this time assuming concrete values for the
+parameters <script type="math/tex">a</script>, <script type="math/tex">b</script>, <script type="math/tex">c</script> and <script type="math/tex">d</script>: </p><script type="math/tex; mode=display"> \begin{align} 
+\label{rabbit-eq-c}R'&=1.2R-0.5RF\\
+\label{fox-eq-c}F'&=-F+1.5RF
+\end{align}</script>
+<!--l. 134--><p class="noindent">Since we have a concrete example now, it is advisable to set specific units for all
+variables. Let’s assume that: </p><script type="math/tex; mode=display"> \begin{align*} 
+t&=\text{Time, measured in weeks;}\\
+R&=\text{Rabbit population, measured in thousands of individuals;}\\
+F&=\text{Fox population, measured in hundreds of individuals.}
+\end{align*}</script>
+<!--l. 140--><p class="noindent">Notice that we use different units for the rabbit and fox populations, since the
+number of predators is usually much smaller that the number of prey in a realistic
+situation.
+</p><!--l. 142--><p class="noindent">Next suppose that, at a certain time, we have the values: <script type="math/tex; mode=display"> R=4,\quad F=3 </script> With this
+information, we can compute the rates at which each of the populations
+are growing, by plugging in the values of <script type="math/tex">R</script> and <script type="math/tex">F</script> into the equations <a class="reference" href="#rabbit-eq-c">rabbit-eq-c</a> and <a class="reference" href="#fox-eq-c">fox-eq-c</a>:
+</p><script type="math/tex; mode=display"> \begin{align*} 
+R'&=1.2\cdot 4 - 0.5\cdot 4\cdot 3=-1.2\\
+F'&=-4 + 1.5\cdot 4\cdot 3=15.0
+\end{align*}</script>
+<!--l. 151--><p class="noindent">In particular, we can conclude that, for these particular sizes of the rabbit and fox
+population, the number of rabbits is decreasing and the number of foxes is
+increasing.
+</p>
+<div role="article" class="problem-environment problem" id="problem12"><a id="x1-158r12"></a> Suppose that at a certain time, the rabbit population is <script type="math/tex">5000</script> and the fox population is <script type="math/tex">100</script>.
+Find the rate of change of the populations, and determine if each population is
+                                                                  
+
+                                                                  
+increasing and decreasing.
+<!--l. 155--><p class="noindent"><em>Hint</em>: Notice that you will have to scale the populations in the appropriate
+way!
+</p>
+<div role="article" class="problem-environment question" id="problem13"><a id="x1-159r13"></a> <script type="math/tex">R'= \answer {3.5}</script>
+<!--l. 160--><p class="noindent">The rabbit population is </p><div class="multiple-choice" id="problem14"><span class="choice correct " id="choice1">Increasing</span> <span class="choice  " id="choice2">Decreasing</span> </div>
+</div> <div role="article" class="problem-environment question" id="problem15"><a id="x1-160r14"></a> <script type="math/tex">F'= \answer {6.5}</script>
+<!--l. 169--><p class="noindent">The fox population is </p><div class="multiple-choice" id="problem16"><span class="choice correct " id="choice3">Increasing</span> <span class="choice  " id="choice4">Decreasing</span> </div>
+</div>
+</div>
+<!--l. 177--><p class="noindent">We can also represent the rates of change geometrically. We interpret the pair of
+derivatives <script type="math/tex">(R',F')</script> as the components of a vector: <script type="math/tex; mode=display"> \begin {bmatrix}R'\\F'\end {bmatrix}= \begin {bmatrix}1.2R-0.5RF\\-F+1.5RF\end {bmatrix} </script> Then, for <script type="math/tex">R=4</script> and <script type="math/tex">F=3</script> we have: <script type="math/tex; mode=display"> \begin {bmatrix}R'\\F'\end {bmatrix}= \begin {bmatrix}-1.2\\15.0\end {bmatrix} </script> This can be
+represented graphically as in the figure below: </p>
+<div class="center">
+<!--l. 188--><p class="noindent">
+</p><!--l. 189--><p class="noindent">  <img src="./whatIsASystem-figure0.svg" alt=""/>
+</p></div>
  
  
 
