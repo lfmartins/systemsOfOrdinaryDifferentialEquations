@@ -9,7 +9,7 @@
 <meta name="ximera" content="version 0.0.1"/> 
 <link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
 <script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
-<meta name="dependency" content="6e145e32d3dd146e46615b74d8650830e570a1b2 preamble.tex"/><meta name="dependency" content="499d80fe7d077773a9620d01feb3c79f8571fe3f whatIsASystem.tex"/></head><body> 
+<meta name="dependency" content="6e145e32d3dd146e46615b74d8650830e570a1b2 preamble.tex"/><meta name="dependency" content="60869624e1015974236af38ba1008cabb29a3bde whatIsASystem.tex"/></head><body> 
 <div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
 \newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
 \newcommand {\ungraded }[0]{}
@@ -247,9 +247,6 @@ the velocity of the mass. Write below a system of ODEs for the variables <script
 </div>
 <div role="article" class="problem-environment question" id="problem10"><a id="x1-156r10"></a> <script type="math/tex">y'= \answer {-(k/m)x-(c/m)y}</script>
 </div>
-<div class="theorem-like problem-environment explanation" id="problem11"><a id="x1-157r11"></a>The interpretation of derivative of displacement as velocity gives directly: <script type="math/tex; mode=display"> x'=y. </script> Plugging
-this into the equation of the harmonic oscillator yields: <script type="math/tex; mode=display"> y'=x''=-\frac {k}{m}x-\frac {c}{m}x'=-\frac {k}{m}x-\frac {c}{m}y. </script>
-</div>
 </div>
 <!--l. 128--><p class="noindent">We now proceed to the numerical and graphical interpretation of a system of ODEs.
 Let’s go back to the predator-prey model, this time assuming concrete values for the
@@ -277,19 +274,19 @@ F'&=-4 + 1.5\cdot 4\cdot 3=15.0
 population, the number of rabbits is decreasing and the number of foxes is
 increasing.
 </p>
-<div role="article" class="problem-environment problem" id="problem12"><a id="x1-158r12"></a> Suppose that at a certain time, the rabbit population is <script type="math/tex">5000</script> and the fox population is <script type="math/tex">100</script>.
+<div role="article" class="problem-environment problem" id="problem11"><a id="x1-157r11"></a> Suppose that at a certain time, the rabbit population is <script type="math/tex">5000</script> and the fox population is <script type="math/tex">100</script>.
 Find the rate of change of the populations, and determine if each population is
 increasing and decreasing.
+<!--l. 154--><p class="noindent"><em>Hint</em>: Notice that you will have to scale the populations in the appropriate
+way!
                                                                   
 
                                                                   
-<!--l. 154--><p class="noindent"><em>Hint</em>: Notice that you will have to scale the populations in the appropriate
-way!
 </p>
-<div role="article" class="problem-environment question" id="problem13"><a id="x1-159r13"></a> <script type="math/tex">R'= \answer {3.5}</script>
-<!--l. 159--><p class="noindent">The rabbit population is </p><div class="multiple-choice" id="problem14"><span class="choice correct " id="choice1">Increasing</span> <span class="choice  " id="choice2">Decreasing</span> </div>
-</div> <div role="article" class="problem-environment question" id="problem15"><a id="x1-160r14"></a> <script type="math/tex">F'= \answer {6.5}</script>
-<!--l. 168--><p class="noindent">The fox population is </p><div class="multiple-choice" id="problem16"><span class="choice correct " id="choice3">Increasing</span> <span class="choice  " id="choice4">Decreasing</span> </div>
+<div role="article" class="problem-environment question" id="problem12"><a id="x1-158r12"></a> <script type="math/tex">R'= \answer {3.5}</script>
+<!--l. 159--><p class="noindent">The rabbit population is </p><div class="multiple-choice" id="problem13"><span class="choice correct " id="choice1">Increasing</span> <span class="choice  " id="choice2">Decreasing</span> </div>
+</div> <div role="article" class="problem-environment question" id="problem14"><a id="x1-159r13"></a> <script type="math/tex">F'= \answer {6.5}</script>
+<!--l. 168--><p class="noindent">The fox population is </p><div class="multiple-choice" id="problem15"><span class="choice correct " id="choice3">Increasing</span> <span class="choice  " id="choice4">Decreasing</span> </div>
 </div>
 </div>
 <!--l. 176--><p class="noindent">We can also represent the rates of change geometrically. We interpret the pair of
