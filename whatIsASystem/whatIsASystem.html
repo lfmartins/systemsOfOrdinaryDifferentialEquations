@@ -9,7 +9,7 @@
 <meta name="ximera" content="version 0.0.1"/> 
 <link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
 <script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
-<meta name="dependency" content="4c2d6edba6a134c4bcbb87f7127b7b1bc3526d3c whatIsASystem/whatIsASystem.tex"/></head><body> 
+<meta name="dependency" content="5179796e9db55fb17fd0fdb6b0a747a591a11496 whatIsASystem/whatIsASystem.tex"/></head><body> 
 <div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
 \newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
 \newcommand {\ungraded }[0]{}
@@ -71,6 +71,66 @@ other. We make the following assumptions: </p>
      constants for populations <script type="math/tex">x</script> and <script type="math/tex">y</script> by <script type="math/tex">b>0</script> and <script type="math/tex">d>0</script>, respectively.</li></ul>
 <div role="article" class="problem-environment question" id="problem2"><a id="x1-18r2"></a> <script type="math/tex">x'= \answer {ax-bxy}</script>
 </div> <div role="article" class="problem-environment question" id="problem3"><a id="x1-19r3"></a> <script type="math/tex">y'= \answer {cy-dxy}</script>
+</div>
+</div>
+<div role="article" class="problem-environment problem" id="problem4"><a id="x1-20r4"></a> A more realistic assumption in the predator-prey model is that the prey population
+grows logistically in the absence of predators. Write the system of ODEs for this
+situation, using <script type="math/tex">a</script> for the intrinsic growth rate and <script type="math/tex">K</script> for the carrying capacity of the
+rabbit population: <div role="article" class="problem-environment question" id="problem5"><a id="x1-21r5"></a>
+<!--l. 62--><p class="noindent"><script type="math/tex">R'= \answer {ax(1-x/K)-bxy}</script>
+</p></div> <div role="article" class="problem-environment question" id="problem6"><a id="x1-22r6"></a>
+<!--l. 66--><p class="noindent"><script type="math/tex">F'= \answer {-cx+dxy}</script>
+</p></div>
+</div>
+<div role="article" class="problem-environment problem" id="problem7"><a id="x1-23r7"></a> Another way in which system appear is in modeling higher-order differential
+equations. Recall the general equation for the unforced harmonic oscillator: <script type="math/tex; mode=display"> mx''+cx'+kx=0, </script> where <script type="math/tex">m>0</script>, <script type="math/tex">c\ge 0</script>
+and <script type="math/tex">k>0</script>. The variable <script type="math/tex">x</script> represents the displacement of the mass. Let <script type="math/tex">y</script> represent
+the velocity of the mass. Write below a system of ODEs for the variables <script type="math/tex">x</script>,
+<script type="math/tex">y</script>:
+<div role="article" class="problem-environment question" id="problem8"><a id="x1-24r8"></a> <script type="math/tex">x'= \answer {y}</script>
+</div>
+<div role="article" class="problem-environment question" id="problem9"><a id="x1-25r9"></a> <script type="math/tex">y'= \answer {-(k/m)x-(c/m)y}</script>
+</div>
+</div>
+<!--l. 95--><p class="noindent">We now proceed to the numerical and graphical interpretation of a system of ODEs.
+Let’s go back to the predator-prey model, this time assuming concrete values for the
+parameters <script type="math/tex">a</script>, <script type="math/tex">b</script>, <script type="math/tex">c</script> and <script type="math/tex">d</script>: </p><script type="math/tex; mode=display"> \begin{align} 
+\label{rabbit-eq-c}R'&=1.2R-0.5RF\\
+\label{fox-eq-c}F'&=-F+1.5RF
+                                                                  
+
+                                                                  
+\end{align}</script>
+<!--l. 100--><p class="noindent">Since we have a concrete example now, it is advisable to set specific units for all
+variables. Let’s assume that: </p><script type="math/tex; mode=display"> \begin{align*} 
+t&=\text{Time, measured in weeks;}\\
+R&=\text{Rabbit population, measured in thousands of individuals;}\\
+F&=\text{Fox population, measured in hundreds of individuals.}
+\end{align*}</script>
+<!--l. 106--><p class="noindent">Notice that we use different units for the rabbit and fox populations, since the
+number of predators is usually much smaller that the number of prey in a realistic
+situation.
+</p><!--l. 108--><p class="noindent">Next suppose that, at a certain time, we have the values: <script type="math/tex; mode=display"> R=4,\quad F=3 </script> With this
+information, we can compute the rates at which each of the populations
+are growing, by plugging in the values of <script type="math/tex">R</script> and <script type="math/tex">F</script> into the equations <a class="reference" href="#rabbit-eq-c">rabbit-eq-c</a> and <a class="reference" href="#fox-eq-c">fox-eq-c</a>:
+</p><script type="math/tex; mode=display"> \begin{align*} 
+R'&=1.2\cdot 4 - 0.5\cdot 4\cdot 3=-1.2\\
+F'&=-4 + 1.5\cdot 4\cdot 3=15.0
+\end{align*}</script>
+<!--l. 117--><p class="noindent">In particular, we can conclude that, for these particular sizes of the rabbit and fox
+population, the number of rabbits is decreasing and the number of foxes is
+increasing.
+</p>
+<div role="article" class="problem-environment problem" id="problem10"><a id="x1-26r10"></a> Suppose that at a certain time, the rabbit population is <script type="math/tex">5000</script> and the fox population is <script type="math/tex">100</script>.
+Find the rate of change of the populations, and determine if each population is
+increasing and decreasing.
+<!--l. 121--><p class="noindent"><em>Hint</em>: Notice that you will have to scale the populations in the appropriate
+way!
+</p>
+<div role="article" class="problem-environment question" id="problem11"><a id="x1-27r11"></a> <script type="math/tex">R'= \answer {3.5}</script>
+<!--l. 126--><p class="noindent">The rabbit population is </p><div class="multiple-choice" id="problem12"><span class="choice correct " id="choice1">Increasing</span> <span class="choice  " id="choice2">Decreasing</span> </div>
+</div> <div role="article" class="problem-environment question" id="problem13"><a id="x1-28r12"></a> <script type="math/tex">F'= \answer {6.5}</script>
+<!--l. 135--><p class="noindent">The fox population is </p><div class="multiple-choice" id="problem14"><span class="choice correct " id="choice3">Increasing</span> <span class="choice  " id="choice4">Decreasing</span> </div>
 </div>
 </div>
  
