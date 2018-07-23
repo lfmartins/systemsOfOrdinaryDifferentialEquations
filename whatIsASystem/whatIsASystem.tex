@@ -55,4 +55,89 @@ $y'= \answer{cy-dxy}$
 \end{question}
 \end{problem}
 
+\begin{problem}
+A more realistic assumption in the predator-prey model is that the prey population grows logistically in the absence of predators. Write the system of ODEs for this situation, using $a$ for the intrinsic growth rate and $K$ for the carrying capacity of the rabbit population:
+\begin{question}
+
+$R'= \answer{ax(1-x/K)-bxy}$
+\end{question}
+\begin{question}
+
+$F'= \answer{-cx+dxy}$
+\end{question}
+\end{problem}
+
+\begin{problem} Another way in which system appear is in modeling higher-order differential equations. Recall the general equation for the unforced harmonic oscillator:
+\[
+mx''+cx'+kx=0,
+\]
+where $m>0$, $c\ge 0$ and $k>0$. The variable $x$ represents the displacement of the mass. Let $y$ represent the velocity of the mass. Write below a system of ODEs for the variables $x$, $y$:
+
+\begin{question}
+$x'= \answer{y}$
+\end{question}
+
+\begin{question}
+$y'= \answer{-(k/m)x-(c/m)y}$
+\end{question}
+
+%\begin{explanation} The interpretation of derivative of displacement as velocity gives directly:
+%\[
+%x'=y.
+%\]
+%Plugging this into the equation of the harmonic oscillator yields:
+%\[
+%y'=x''=-\frac{k}{m}x-\frac{c}{m}x'=-\frac{k}{m}x-\frac{c}{m}y.
+%\]
+%\end{explanation}
+\end{problem}
+
+We now proceed to the numerical and graphical interpretation of a system of ODEs. Let's go back to the predator-prey model, this time assuming concrete values for the parameters $a$, $b$, $c$ and $d$:
+\begin{align}
+\label{rabbit-eq-c}R'&=1.2R-0.5RF\\
+\label{fox-eq-c}F'&=-F+1.5RF
+\end{align}
+Since we have a concrete example now, it is advisable to set specific units for all variables. Let's assume that:
+\begin{align*}
+t&=\text{Time, measured in weeks;}\\
+R&=\text{Rabbit population, measured in thousands of individuals;}\\
+F&=\text{Fox population, measured in hundreds of individuals.}
+\end{align*}
+Notice that we use different units for the rabbit and fox populations, since the number of predators is usually much smaller that the number of prey in a realistic situation.
+
+Next suppose that, at a certain time, we have the values:
+\[
+R=4,\quad F=3
+\]
+With this information, we can compute the rates at which each of the populations are growing, by plugging in the values of $R$ and $F$ into the equations~\ref{rabbit-eq-c} and~\ref{fox-eq-c}:
+\begin{align*}
+R'&=1.2\cdot 4 - 0.5\cdot 4\cdot 3=-1.2\\
+F'&=-4 + 1.5\cdot 4\cdot 3=15.0
+\end{align*}
+In particular, we can conclude that, for these particular sizes of the rabbit and fox population, the number of rabbits is decreasing and the number of foxes is increasing.
+
+\begin{problem} Suppose that at a certain time, the rabbit population is  $5000$ and the fox population is $100$. Find the rate of change of the populations, and determine if each population is increasing and decreasing.
+
+\emph{Hint}: Notice that you will have to scale the populations in the appropriate way!
+
+\begin{question}
+$R'= \answer{3.5}$
+
+The rabbit population is 
+\begin{multipleChoice}
+\choice[correct]{Increasing}
+\choice{Decreasing}
+\end{multipleChoice}
+\end{question}
+\begin{question}
+$F'= \answer{6.5}$
+
+The fox population is 
+\begin{multipleChoice}
+\choice[correct]{Increasing}
+\choice{Decreasing}
+\end{multipleChoice}
+\end{question}
+\end{problem}
+
 \end{document}
