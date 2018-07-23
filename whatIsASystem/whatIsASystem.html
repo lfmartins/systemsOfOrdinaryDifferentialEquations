@@ -9,7 +9,7 @@
 <meta name="ximera" content="version 0.0.1"/> 
 <link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
 <script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
-<meta name="dependency" content="565d94965af2a50fdea82d8249fbb54f20d77b1e whatIsASystem/whatIsASystem.tex"/></head><body> 
+<meta name="dependency" content="be3274a79468d25ed74810ab004a11f9f283de4f whatIsASystem/whatIsASystem.tex"/></head><body> 
 <div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
 \newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
 \newcommand {\ungraded }[0]{}
@@ -44,6 +44,20 @@ there usually are many possible ways of modeling a real-world system. As a
 rule of thumb, scientists try to use the simplest possible model as a first
 approximation. For the predator prey model, the following are reasonable
 hypothesis:
+</p><!--l. 18--><p class="noindent">In the absence of predators, the prey population grows without limits. We can model
+this by an exponential growth model: <script type="math/tex; mode=display"> R'=aR\text { where $a>0$}. </script> In the absence of prey, the predator
+population decays to zero, since they don’t have any available food. This can be
+modeled by an exponential decay model: <script type="math/tex; mode=display"> F'=-cF\text { where $b>0$.} </script> To model the interactions between the two
+populations, we assume that the number of possible “predation situations” is
+proportional to the number of possible “encounters” between individuals of the two
+populations, which can be approximated by the product <script type="math/tex">RF</script>. Since predation is
+disadvantageous to the prey population, we subtract a term proportional to <script type="math/tex">RF</script> to the
+prey equation: <script type="math/tex; mode=display"> R'=aR-bRF\text { where $a,c>0$}. </script> Since predation is beneficial to the predator population, we add a
+term proportional to <script type="math/tex">RF</script> to the predator population: <script type="math/tex; mode=display"> F'=-cF+dRF\text { where $b,d>0$.} </script> Putting all together, we get the
+pair of equations <a class="reference" href="#rabbit-eq">rabbit-eq</a>, <a class="reference" href="#fox-eq">fox-eq</a>.
+                                                                  
+
+                                                                  
  
  
 
