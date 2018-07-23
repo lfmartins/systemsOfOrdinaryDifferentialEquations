@@ -9,7 +9,7 @@
 <meta name="ximera" content="version 0.0.1"/> 
 <link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
 <script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
-<meta name="dependency" content="41050799ccebf6157fc7f4c19103c8108cb4b4be whatIsASystem/whatIsASystem.tex"/></head><body> 
+<meta name="dependency" content="565d94965af2a50fdea82d8249fbb54f20d77b1e whatIsASystem/whatIsASystem.tex"/></head><body> 
 <div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
 \newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
 \newcommand {\ungraded }[0]{}
@@ -30,7 +30,21 @@
 <div class="abstract">
 <!--l. 5--><p class="noindent">Another Ximera activity
 </p></div>   <div class="maketitle"></div>
-Trying to create a new activity.  
+To introduce the concept of a system of ODEs, let’s consider the <em>Lotka-Volterra
+predator-prey model</em>, which describes two animal species in the wild, traditionally
+referred to as “rabbits” (the prey) and “foxes” (the predator). Denoting
+by <script type="math/tex">R(t)</script> and <script type="math/tex">F(t)</script> the rabbit and fox populations, respectively, we use the following
+differential equations to model the dynamics of the two species in the wild:
+<script type="math/tex; mode=display"> \begin{align} 
+\label{rabbit-eq}R'&=aR-bRF\\
+\label{fox-eq}F'&=cF+dRF
+\end{align}</script>
+<!--l. 14--><p class="noindent">How do ecologists come up with this model? This is not a simple question, since
+there usually are many possible ways of modeling a real-world system. As a
+rule of thumb, scientists try to use the simplest possible model as a first
+approximation. For the predator prey model, the following are reasonable
+hypothesis:
+ 
  
 
                                                                   
@@ -39,4 +53,4 @@ Trying to create a new activity.
                                                                   
 
 
-</body></html>
+</p></body></html>

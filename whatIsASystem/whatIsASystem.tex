@@ -13,4 +13,30 @@ To introduce the concept of a system of ODEs, let's consider the \emph{Lotka-Vol
 \end{align}
 How do ecologists come up with this model? This is not a simple question, since there usually are many possible ways of modeling a real-world system. As a rule of thumb, scientists try to use the simplest possible model as a first approximation. For the predator prey model, the following are reasonable hypothesis:
 
+%\begin{itemize}
+%\item 
+In the absence of predators, the prey population grows without limits. We can model this by an exponential growth model:
+\[
+R'=aR\text{ where $a>0$}.
+\]
+%\item 
+In the absence of prey, the predator population decays to zero, since they don't have any available food. This can be modeled by an exponential decay model:
+\[
+F'=-cF\text{ where $b>0$.}
+\]
+%\item
+To model the interactions between the two populations, we assume that the number of possible ``predation situations'' is proportional to the number of possible ``encounters'' between individuals of the two populations, which can be approximated by the product $RF$.
+%\item 
+Since predation is disadvantageous to the prey population, we subtract a term proportional to $RF$ to the prey equation:
+\[
+R'=aR-bRF\text{ where $a,c>0$}.
+\]
+%\item 
+Since predation is beneficial to the predator population, we add a term proportional to $RF$ to the predator population:
+\[
+F'=-cF+dRF\text{ where $b,d>0$.}
+\]
+%\end{itemize}
+Putting all together, we get the pair of equations~\ref{rabbit-eq},~\ref{fox-eq}.
+
 \end{document}
